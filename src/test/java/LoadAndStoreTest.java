@@ -16,14 +16,19 @@ class LoadAndStoreTest {
     void tearDown() {
     }
 
+    LoadAndStore las = new LoadAndStore();
     @Test
-    void loadIntArrayFromFile() {
-        assertEquals(null, "");
+    void TestloadIntArrayFromFile() {
+        int[] expected = {4,5,6,11,13,8,9,7,14,18};
+        int[] actual = las.loadIntArrayFromFile("/Users/zachary/Projects/ArraysAndLists/testIntegerData1.txt");
+        assertEquals(expected, actual);
     }
 
     @Test
     void loadIntegerArrayListFromFile() {
-        assertEquals(null, "");
+        int[] expected = {4,5,6,11,13,8,9,7,14,18};
+        int[] actual = las.loadIntArrayFromFile("/Users/zachary/Projects/ArraysAndLists/testIntegerData1.txt");
+        assertEquals(expected, actual);
     }
 
     @Test

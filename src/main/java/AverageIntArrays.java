@@ -3,15 +3,25 @@ public class AverageIntArrays {
 // Complete these methods
 
     public int count(int[] aa) {
-        return 0;
+        return aa.length;
     }
 
     public int sum(int[] aa) {
-        return 0;
+        int sum = 0;
+        for (int i : aa) {
+            sum += i;
+        }
+        return sum;
     }
 
     public int average(int[] aa) {
-        return 0;
+        int average = 0;
+        for (int i : aa) {
+            average += i;
+        }
+        if (aa.length==0) {
+            return average;
+        }
+        return average/aa.length;
     }
-
 }

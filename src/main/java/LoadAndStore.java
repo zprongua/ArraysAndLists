@@ -45,15 +45,24 @@ public class LoadAndStore {
 
     // use testDoubleData2.txt to test
 
-    public double[] loaddoubleArrayFromFile(String filename) { return new double[]{}; }
+    public double[] loaddoubleArrayFromFile(String filename) {
 
-    public ArrayList<Double> loadDoubleArrayListFromFile(String filename) { return null; }
+        return new double[]{};
+    }
+
+    public ArrayList<Double> loadDoubleArrayListFromFile(String filename) {
+        return null;
+    }
 
     // use testStringData3.txt to test
 
-    public String[] loadStringArrayFromFile(String filename) { return null; }
+    public String[] loadStringArrayFromFile(String filename) {
+        return null;
+    }
 
-    public ArrayList<String> loadStringArrayListFromFile(String filename) { return null; }
+    public ArrayList<String> loadStringArrayListFromFile(String filename) {
+        return null;
+    }
 
     //
     // Finally:

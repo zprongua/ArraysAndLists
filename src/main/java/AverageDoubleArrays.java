@@ -4,11 +4,7 @@ public class AverageDoubleArrays {
 // Complete these methods
 
     public double count(double[] aa) {
-        int count = 0;
-        for (double d : aa) {
-            count++;
-        }
-        return count;
+        return aa.length;
     }
 
     public double sum(double[] aa) {
