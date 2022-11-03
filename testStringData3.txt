@@ -1,0 +1,13 @@
+// These are Strings
+4.4
+5.5
+Foo
+11.0001
+Bar
+Lost in Space
+Lido Shuffle
+How much data was destroyed?
+I think therefore I compute
+0
+NaN
+ZipCode Rocks!
