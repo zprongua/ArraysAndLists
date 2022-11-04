@@ -45,23 +45,74 @@ public class LoadAndStore {
 
     // use testDoubleData2.txt to test
 
-    public double[] loaddoubleArrayFromFile(String filename) {
-
-        return new double[]{};
+    public double[] loadDoubleArrayFromFile(String filename) {
+        ArrayList<Double> arrList = loadDoubleArrayListFromFile(filename);
+        double[] arr = new double[arrList.size()];
+        for (int i = 0; i < arrList.size(); i++)
+            arr[i] = arrList.get(i);
+        return arr;
     }
 
     public ArrayList<Double> loadDoubleArrayListFromFile(String filename) {
-        return null;
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(filename));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line ="";
+        ArrayList<Double> result = new ArrayList<>();
+
+        while (true) {
+            try {
+                if ((line = br.readLine()) == null) break;
+                if (line.startsWith("//")) continue;
+                Double number = Double.parseDouble(line);
+                result.add(number);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return result;
     }
 
     // use testStringData3.txt to test
 
     public String[] loadStringArrayFromFile(String filename) {
-        return null;
+        ArrayList<String> arrList = loadStringArrayListFromFile(filename);
+        String[] arr = new String[arrList.size()];
+        for (int i = 0; i < arrList.size(); i++)
+            arr[i] = arrList.get(i);
+        return arr;
     }
 
     public ArrayList<String> loadStringArrayListFromFile(String filename) {
-        return null;
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(filename));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line ="";
+        ArrayList<String> result = new ArrayList<>();
+
+        while (true) {
+            try {
+                if ((line = br.readLine()) == null) break;
+                if (line.startsWith("//")) continue;
+                String str = line;
+                result.add(str);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return result;
     }
 
     //
